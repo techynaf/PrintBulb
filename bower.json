@@ -1,0 +1,23 @@
+{
+  "name": "shohozprint",
+  "authors": [
+    "Sakib Hasan <ajobbalok22@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.7",
+    "angular-mocks": "^1.5.7",
+    "angular-route": "1.5.x",
+    "bootstrap": "3.3.x"
+  }
+}

@@ -1,0 +1,50 @@
+<md-dialog aria-label="" ng-cloak style="min-width: 80%;">
+    <form>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Create a new {{type.name}}</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" aria-label="cancel" ng-click="cancel()">
+                    <md-icon md-svg-src="assets/images/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content>
+            <div class="md-dialog-content">
+                <div ng-if="products.length == 0" layout-padding>
+                    We dont have any templates for {{type.name}} right now.
+                </div>
+                <div class='md-padding' layout="row" layout-wrap>
+                    <md-card style="width: 31.25%;" ng-repeat="product in products">
+                        <!--<img style="width: 100px; height: 100px;" ng-src="{{product.img}}" class="md-card-image" alt="Washed Out">-->
+                        <md-card-title>
+                            <md-card-title-text>
+                                <span class="md-headline">{{product.name}}</span>
+                            </md-card-title-text>
+                        </md-card-title>
+                        <md-card-content>
+                            {{product.price}}
+                        </md-card-content>
+                        <md-card-actions layout="row" layout-align="end center">
+                            <md-button ng-click="useThisTemplate(product)">Use This Template</md-button>
+                        </md-card-actions>
+                    </md-card>
+                </div>
+            </div>
+        </md-dialog-content>
+        <md-dialog-actions layout="row">
+            <!--
+            <md-button href="http://en.wikipedia.org/wiki/Mango" target="_blank" md-autofocus>
+                More on Wikipedia
+            </md-button>
+            <span flex></span>
+            <md-button ng-click="answer('not useful')">
+                Not Useful
+            </md-button>
+            <md-button ng-click="answer('useful')">
+                Close This
+            </md-button>
+            -->
+        </md-dialog-actions>
+    </form>
+</md-dialog>

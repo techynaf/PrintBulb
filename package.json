@@ -1,0 +1,32 @@
+{
+  "name": "shohozprint",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start test/karma.conf.js",
+    "start": "lite-server",
+    "postinstall": "bower install",
+    "prestart": "npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/techynaf/shohozprint-frontend.git"
+  },
+  "author": "techynaf",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/techynaf/shohozprint-frontend#readme",
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "jasmine": "^2.4.1",
+    "karma": "^1.0.0",
+    "karma-jasmine": "^1.0.2",
+    "karma-phantomjs-launcher": "^1.0.1",
+    "lite-server": "^2.2.2"
+  },
+  "dependencies": {
+    "angular-animate": "^1.5.7",
+    "angular-aria": "^1.5.7",
+    "angular-material": "^1.1.0-rc.5"
+  }
+}

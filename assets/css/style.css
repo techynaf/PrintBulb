@@ -1,0 +1,38 @@
+.beta-suffix{
+    background: red;
+    padding: 2px;
+    color: white;
+}
+.homeHeader{
+    background-color: #008BC3;
+    height: 500px;
+    padding-top: 10px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    margin-bottom: 5rem;
+}
+md-toolbar .homeHeaderTopMenu{
+    background-color: red;
+}
+.homeHeaderWelcomeText{
+    color: white;
+    padding-top: 80px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}

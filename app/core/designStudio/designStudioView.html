@@ -1,0 +1,62 @@
+<div ng-controller="designStudioController">
+
+    <home-header banner="false"></home-header>
+
+    <div ng-cloak layout-gt-md="row" layout="row">
+        <div flex-gt-md="20" flex>
+            <md-toolbar layout="row" class="md-hue-1">
+                <div class="md-toolbar-tools">
+                    <span>Saved Design</span>
+                </div>
+            </md-toolbar>
+            <md-content>
+                <md-list flex>
+                    <md-subheader class="md-no-sticky">Click on your saved image to continue editing</md-subheader>
+                    <md-divider ></md-divider>
+                    <md-list-item class="md-1-line" ng-click="null">
+                        My Design 1
+                    </md-list-item>
+                    <md-divider ></md-divider>
+                    <md-list-item class="md-1-line" ng-click="null">
+                        My Design 2
+                    </md-list-item>
+                    <md-divider ></md-divider>
+                    <md-list-item class="md-1-line" ng-click="null">
+                        My Design 3
+                    </md-list-item>
+                    <md-divider ></md-divider>
+                </md-list>
+            </md-content>
+        </div>
+        <md-divider></md-divider>
+        <div flex-gt-md="80" flex>
+            <md-toolbar layout="row" >
+                <div class="md-toolbar-tools">
+                    <span>Design Studio</span>
+                </div>
+            </md-toolbar>
+            <md-content>
+                <!-- Design Studio Starts -->
+                <md-menu-bar>
+                    <md-menu>
+                        <button ng-click="$mdOpenMenu()">
+                            New Design
+                        </button>
+                        <md-menu-content>
+                            <md-menu-item ng-repeat="type in newDesignTypes">
+                                <md-button ng-click="showDesignTemplates($event, type)">
+                                    {{type.name}}
+                                </md-button>
+                            </md-menu-item>
+                        </md-menu-content>
+                    </md-menu>
+                </md-menu-bar>
+
+
+                
+
+                <!-- Design Studio Ends -->
+            </md-content>
+        </div>
+    </div>
+</div><!-- homeController end -->
