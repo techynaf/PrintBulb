@@ -16,13 +16,13 @@
                 </div>
                 <div class='md-padding' layout="row" layout-wrap>
                     <md-card style="width: 31.25%;" ng-repeat="product in products">
-                        <!--<img style="width: 100px; height: 100px;" ng-src="{{product.img}}" class="md-card-image" alt="Washed Out">-->
                         <md-card-title>
                             <md-card-title-text>
                                 <span class="md-headline">{{product.name}}</span>
                             </md-card-title-text>
                         </md-card-title>
                         <md-card-content>
+                            <img style="width: 100px; height: 100px;" ng-src="{{product.img}}" class="md-card-image" alt="Washed Out">
                             {{product.price}}
                         </md-card-content>
                         <md-card-actions layout="row" layout-align="end center">

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "karma start test/karma.conf.js",
     "start": "lite-server",
-    "postinstall": "bower install",
+    "postinstall": "bower install && clear",
     "prestart": "npm install"
   },
   "repository": {
