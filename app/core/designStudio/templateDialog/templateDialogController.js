@@ -7,8 +7,7 @@ designStudio.controller('templateDialogController', ['$scope', '$mdDialog', 'loc
         $mdDialog.cancel();
     };
     $scope.useThisTemplate = function(template){
-        console.log(template);
-        $mdDialog.hide();   
+        $mdDialog.hide(template);   
     };
     $scope.products = productFromCategoryService.getProductsFromCategory($scope.type.id);
 }]);

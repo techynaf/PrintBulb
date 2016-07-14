@@ -7,8 +7,22 @@ productFromCategoryService.service('productFromCategoryService', function Catego
                     {
                         id: 111,
                         name: "Beutiful Business Card 1",
-                        img: "http://www.vistaprint.com/galleries/GalleryPreviewImage?templateDescriptor=2001215",
-                        price: 10
+                        img: "assets/images/card1.png",
+                        price: 10,
+                        elements: [
+                            {
+                                left: 100,
+                                top: 100,
+                                text: "Sakib Hasan",
+                                img: "",
+                            },
+                            {
+                                left: 100,
+                                top: 200,
+                                text: "CEO",
+                                img: "",
+                            },
+                        ]
                     },
                     {
                         id: 112,

@@ -21,14 +21,13 @@ designStudio.filter('keyboardShortcut', function($window) {
         }).join(seperator);
     };
 })
-designStudio.controller('designStudioController', ['$scope', '$mdMedia', '$mdDialog', 'Fabric', 'FabricConstants', 'Keypress', 'productFromCategoryService', function($scope, $mdMedia, $mdDialog, Fabric, FabricConstants, Keypress, productFromCategoryService) {
-    
+designStudio.controller('designStudioController', ['$scope', '$mdMedia', '$mdDialog', 'Fabric', 'FabricConstants','Keypress', 'productFromCategoryService', function($scope, $mdMedia, $mdDialog, Fabric, FabricConstants, Keypress, productFromCategoryService) {
+
     $scope.newDesignTypes = [
         {name: 'Business Card', id: 1},
         {name: 'Poster', id: 2},
         {name: 'Wedding', id: 3}
-    ];
-    
+    ];    
     // Show Dialog
     $scope.showDesignTemplates = function(ev, type) {    
         var useFullScreen = ($mdMedia('sm') || $mdMedia('xs'))  && $scope.customFullscreen;
@@ -42,10 +41,10 @@ designStudio.controller('designStudioController', ['$scope', '$mdMedia', '$mdDia
             locals: {
                 type: type
             }
-        }).then(function(answer) {
-            $scope.status = 'You said the information was "' + answer + '".';
+        }).then(function(template) {
+            $scope.loadProductInDesigner(template);
         }, function() {
-            $scope.status = 'You cancelled the dialog.';
+            //$scope.status = 'You cancelled the dialog.';
         });
         $scope.$watch(function() {
             return $mdMedia('xs') || $mdMedia('sm');
@@ -53,7 +52,34 @@ designStudio.controller('designStudioController', ['$scope', '$mdMedia', '$mdDia
             $scope.customFullscreen = (wantsFullScreen === true);
         });
     };
-    
+
     // Testing purpose
     $scope.products = productFromCategoryService.getProductsFromCategory(1);
+
+
+    // FabricJS
+
+    $scope.loadProductInDesigner = function(template){
+        console.log(template);    
+        var canvas = window._canvas = new fabric.Canvas('c');
+
+        canvas.setWidth(527);
+        canvas.setHeight(311);
+
+        canvas.setBackgroundImage(template.img, canvas.renderAll.bind(canvas), {
+            //backgroundImageOpacity: 0.5,
+            backgroundImageStretch: false
+        });
+
+        for(i = 0; i < template.elements.length; i++){
+            canvas.add(new fabric.IText(template.elements[i].text, { 
+                fontFamily: 'Delicious_500', 
+                left: template.elements[i].left, 
+                top: template.elements[i].top,
+                fill: '#ffffff'
+            }));    
+        }
+
+
+    };
 }]);

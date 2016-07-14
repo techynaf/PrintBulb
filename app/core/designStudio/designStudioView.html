@@ -30,13 +30,15 @@
         </div>
         <md-divider></md-divider>
         <div flex-gt-md="80" flex>
+            
             <md-toolbar layout="row" >
                 <div class="md-toolbar-tools">
                     <span>Design Studio</span>
                 </div>
             </md-toolbar>
+            
+            <!-- Design Studio Starts -->
             <md-content>
-                <!-- Design Studio Starts -->
                 <md-menu-bar>
                     <md-menu>
                         <button ng-click="$mdOpenMenu()">
@@ -50,13 +52,39 @@
                             </md-menu-item>
                         </md-menu-content>
                     </md-menu>
+                    <md-menu>
+                        <button ng-click="$mdOpenMenu()">
+                            Save
+                        </button>
+                        <md-menu-content>
+                            <md-menu-item ng-repeat="type in newDesignTypes">
+                                <md-button ng-click="showDesignTemplates($event, type)">
+                                    {{type.name}}
+                                </md-button>
+                            </md-menu-item>
+                        </md-menu-content>
+                    </md-menu>
                 </md-menu-bar>
-
-
-                
-
-                <!-- Design Studio Ends -->
             </md-content>
+
+
+
+            <div ng-cloak layout-gt-md="row" layout="row">
+                <div flex-gt-md="20" flex>
+                    <md-button class="md-raised">Add Text</md-button>
+                    <br>
+                    <md-button class="md-raised">Add Image</md-button>
+                </div>
+                <div flex-gt-md="20" flex>
+                    <div class="studio-design-panel" parent-click="fabric.deactivateAll()">
+                        <div class='fabric-container'>
+                            <canvas id="c" class="main-fabric-panel"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Design Studio Ends -->
         </div>
     </div>
 </div><!-- homeController end -->
