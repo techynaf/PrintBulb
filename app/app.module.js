@@ -5,5 +5,6 @@ var PrintBulb = angular.module('PrintBulb', [
     'businessCards',
     'posters',
     'ngMaterial',
-    'designStudio'
+    'designStudio',
+    'adminPanel'
 ]);

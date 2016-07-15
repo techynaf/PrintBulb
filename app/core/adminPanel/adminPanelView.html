@@ -1,0 +1,70 @@
+<div ng-controller="adminPanelController">
+    <home-header banner="false"></home-header>
+
+    <div ng-cloak layout-gt-md="row" layout="row">
+        <div flex-gt-md="100" flex>
+            <md-toolbar layout="row" >
+                <div class="md-toolbar-tools">
+                    <span>Design Studio for Admin</span>
+                </div>
+            </md-toolbar>
+
+            <!--Design Studio Starts -->
+            <md-content md-theme="docs-dark" layout-padding>
+                <div layout-gt-md="row" layout="row">
+                    <div flex-gt-md="15" flex style="border-right: 1px solid white">
+                        <h3>Variables</h3>
+                        <md-input-container>
+                            <label>Width</label>
+                            <input placeholder="527px" ng-model="user.title">
+                        </md-input-container>
+                        <br>
+                        <md-input-container>
+                            <label>Height</label>
+                            <input placeholder="311px" ng-model="user.email">
+                        </md-input-container>
+                        <br>
+                        <md-button class="md-raised md-primary" ng-click="AddText()">+Text</md-button>
+                        <br>
+                        <md-button class="md-raised md-primary" ng-click="AddShape()">+Shape</md-button>
+                        <br>
+                        <md-button class="md-raised md-primary" ng-click="SetBackground($event, 'Background')">Background</md-button>
+                        <br>
+                        <md-button class="md-raised md-warn" ng-click="resetCanvas()">Reset</md-button>
+                    </div>
+                    <div flex-gt-md="50" flex>
+                        <div class="studio-design-panel" parent-click="fabric.deactivateAll()">
+                            <div class='fabric-container'>
+                                <canvas id="c" class="main-fabric-panel"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div flex-gt-md="35" flex style="border-left: 1px solid white">
+                        <div style="padding-left: 10px">
+                            <h3>Layers</h3>
+                            <md-list-item ng-repeat="item in ItemsAdded">
+                                <p> {{ item.text }} </p>
+                                <md-button class="md-raised md-primary" ng-click="AddText()">Color</md-button>
+                                <md-button class="md-raised md-primary" ng-click="AddText()">Font</md-button>
+                                <md-button class="md-raised md-primary" ng-click="AddText()">Color</md-button>
+<!--
+                                <md-slider-container>
+                                    <span>Font Size</span>
+                                    <md-slider flex min="0" max="255" ng-model="item.fontSize" aria-label="red" id="red-slider">
+                                    </md-slider>
+                                    <md-input-container>
+                                        <input flex type="number" ng-model="item.fontSize" aria-label="red" aria-controls="red-slider">
+                                    </md-input-container>
+                                </md-slider-container>
+-->
+
+                                
+                            </md-list-item>
+                        </div>
+
+                    </div>
+                </div>
+            </md-content>
+        </div>
+    </div>
+</div>

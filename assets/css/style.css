@@ -42,12 +42,12 @@ md-toolbar .homeHeaderTopMenu{
     margin-top: 20px;
 }
 .fabric-container{
-    width: 527px;
-    height: 500px;
+    width: 627px;
+    height: 600px;
     margin: 0 auto;
 }
 .main-fabric-panel{
     border: 1px solid black;
-    width: 527px;
-    height: 311px;
+    width: 627px;
+    height: 411px;
 }

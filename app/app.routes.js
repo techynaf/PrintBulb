@@ -20,6 +20,9 @@ config(['$locationProvider', '$routeProvider',
             when('/design-studio', {
                 templateUrl: 'app/core/designStudio/designStudioView.html'
             }).
+            when('/admin-panel', {
+                templateUrl: 'app/core/adminPanel/adminPanelView.html'
+            }).
             otherwise('/');
         }
        ]);
