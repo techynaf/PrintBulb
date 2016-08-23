@@ -6,5 +6,6 @@ var PrintBulb = angular.module('PrintBulb', [
     'posters',
     'ngMaterial',
     'designStudio',
-    'adminPanel'
+    'adminPanel',
+    'login'
 ]);

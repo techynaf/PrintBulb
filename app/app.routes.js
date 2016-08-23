@@ -23,6 +23,9 @@ config(['$locationProvider', '$routeProvider',
             when('/admin-panel', {
                 templateUrl: 'app/core/adminPanel/adminPanelView.html'
             }).
+            when('/login', {
+                templateUrl: 'app/core/login/loginView.html'
+            }).
             otherwise('/');
         }
        ]);
